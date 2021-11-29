@@ -1,5 +1,6 @@
 package com.skni.workshopspring3.controller;
 
+import com.skni.workshopspring3.dto.AddressResponse;
 import com.skni.workshopspring3.repo.AddressRepository;
 import com.skni.workshopspring3.repo.entity.Address;
 import com.skni.workshopspring3.service.AddressService;
@@ -20,8 +21,8 @@ public class AddressController {
     private final AddressService addressService;
 
     @GetMapping("/address")
-    public List<Address> getAddresses() {
-        return addressRepository.findAll();
+    public List<AddressResponse> getAddresses() {
+        return addressService.getAllAddresses();
     }
 
     @GetMapping("/address/{id}")
