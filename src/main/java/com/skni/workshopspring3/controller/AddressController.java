@@ -21,7 +21,6 @@ import java.util.Optional;
 
 @RestController
 @AllArgsConstructor
-@RequestMapping("/api/v1")
 public class AddressController {
 
     private final AddressRepository addressRepository;
